@@ -10,6 +10,7 @@
 		285E85B11B10B13E007554F9 /* SwiftBorderdButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 285E85B01B10B13E007554F9 /* SwiftBorderdButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		285E85B71B10B13E007554F9 /* SwiftBorderdButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285E85AB1B10B13E007554F9 /* SwiftBorderdButton.framework */; };
 		285E85BE1B10B13E007554F9 /* SwiftBorderdButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285E85BD1B10B13E007554F9 /* SwiftBorderdButtonTests.swift */; };
+		285E85C81B10B1D0007554F9 /* BorderdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285E85C71B10B1D0007554F9 /* BorderdButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		285E85B61B10B13E007554F9 /* SwiftBorderdButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBorderdButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		285E85BC1B10B13E007554F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285E85BD1B10B13E007554F9 /* SwiftBorderdButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBorderdButtonTests.swift; sourceTree = "<group>"; };
+		285E85C71B10B1D0007554F9 /* BorderdButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderdButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				285E85B01B10B13E007554F9 /* SwiftBorderdButton.h */,
+				285E85C71B10B1D0007554F9 /* BorderdButton.swift */,
 				285E85AE1B10B13E007554F9 /* Supporting Files */,
 			);
 			path = SwiftBorderdButton;
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285E85C81B10B1D0007554F9 /* BorderdButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +327,7 @@
 		285E85C21B10B13E007554F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -332,12 +337,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		285E85C31B10B13E007554F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -399,6 +406,7 @@
 				285E85C31B10B13E007554F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		285E85C41B10B13E007554F9 /* Build configuration list for PBXNativeTarget "SwiftBorderdButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +415,7 @@
 				285E85C61B10B13E007554F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
