@@ -22,12 +22,12 @@
                                     <constraint firstAttribute="width" constant="240" id="R9b-Fx-jTZ"/>
                                     <constraint firstAttribute="height" constant="59" id="q42-a1-bRe"/>
                                 </constraints>
-                                <state key="normal" title="BorderdButton">
+                                <state key="normal" title="Borderd Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="3"/>
@@ -37,16 +37,77 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-5k-7EW">
+                                <rect key="frame" x="362" y="138" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeh-kF-tMA" customClass="BorderdButton" customModule="SwiftBorderdButton">
+                                <rect key="frame" x="180" y="203" width="240" height="59"/>
+                                <color key="backgroundColor" red="0.85179859400000002" green="0.22137017549999999" blue="0.31022429470000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Wfr-P7-Ofw"/>
+                                    <constraint firstAttribute="height" constant="59" id="kFc-K8-kar"/>
+                                </constraints>
+                                <state key="normal" title="Round Borderd Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.95548856258392334" green="0.33539125323295593" blue="0.45784345269203186" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColorDisable">
+                                        <color key="value" red="1" green="0.69526072719999998" blue="0.76838641029999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable button:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9V-Xg-zGr">
+                                <rect key="frame" x="180" y="286" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgC-ai-CJf">
+                                <rect key="frame" x="362" y="281" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable button:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYR-Gh-smo">
+                                <rect key="frame" x="180" y="143" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PYR-Gh-smo" firstAttribute="leading" secondItem="bgM-l5-R5T" secondAttribute="leading" id="8PS-VD-tcw"/>
+                            <constraint firstItem="eeh-kF-tMA" firstAttribute="top" secondItem="PYR-Gh-smo" secondAttribute="bottom" constant="39" id="8jj-qS-vGu"/>
                             <constraint firstAttribute="centerX" secondItem="bgM-l5-R5T" secondAttribute="centerX" id="92A-Q8-ho8"/>
                             <constraint firstItem="bgM-l5-R5T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="BWC-Wq-QtJ"/>
+                            <constraint firstItem="PYR-Gh-smo" firstAttribute="top" secondItem="bgM-l5-R5T" secondAttribute="bottom" constant="24" id="QZU-gE-KVE"/>
+                            <constraint firstAttribute="centerX" secondItem="eeh-kF-tMA" secondAttribute="centerX" id="YiL-QA-nzH"/>
+                            <constraint firstItem="jgC-ai-CJf" firstAttribute="trailing" secondItem="eeh-kF-tMA" secondAttribute="trailing" constant="-9" id="aDK-t5-80N"/>
+                            <constraint firstItem="Z9V-Xg-zGr" firstAttribute="leading" secondItem="eeh-kF-tMA" secondAttribute="leading" id="aLD-OX-8ls"/>
+                            <constraint firstItem="BjH-5k-7EW" firstAttribute="centerY" secondItem="PYR-Gh-smo" secondAttribute="centerY" id="dMt-0x-N7R"/>
+                            <constraint firstItem="Z9V-Xg-zGr" firstAttribute="top" secondItem="eeh-kF-tMA" secondAttribute="bottom" constant="24" id="eTl-e7-9rL"/>
+                            <constraint firstItem="BjH-5k-7EW" firstAttribute="trailing" secondItem="bgM-l5-R5T" secondAttribute="trailing" constant="-9" id="lDQ-hy-A69"/>
+                            <constraint firstItem="Z9V-Xg-zGr" firstAttribute="centerY" secondItem="jgC-ai-CJf" secondAttribute="centerY" id="uak-30-PZd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="borderedButton1" destination="bgM-l5-R5T" id="nnf-hz-kpN"/>
+                        <outlet property="borderedButton2" destination="eeh-kF-tMA" id="D61-GD-Iey"/>
+                        <outlet property="stateSwitch1" destination="BjH-5k-7EW" id="Xsw-2x-PCb"/>
+                        <outlet property="stateSwitch2" destination="jgC-ai-CJf" id="WNy-Wg-vzr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="412" y="330"/>
         </scene>
     </scenes>
 </document>
