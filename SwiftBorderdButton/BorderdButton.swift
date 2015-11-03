@@ -48,4 +48,48 @@ public class BorderdButton: UIButton {
             }
         }
     }
+    
+    var backgroundColorCached: UIColor?
+    var backgroundColorHighlighted: UIColor? {
+        return backgroundColor?.darkerColor()
+    }
+    
+    public override var highlighted: Bool {
+        didSet {
+            guard highlighted != oldValue else { return }
+            
+            if highlighted {
+                backgroundColorCached = backgroundColor
+                backgroundColor = backgroundColorHighlighted
+            } else {
+                backgroundColor = backgroundColorCached
+            }
+        }
+    }
+    
+}
+
+extension UIColor {
+    
+    func lighterColor(brightness: CGFloat = 0.25) -> UIColor {
+        return colorWithAppendingBrightness(1 + brightness)
+    }
+    
+    func darkerColor(brightness: CGFloat = 0.25) -> UIColor {
+        return colorWithAppendingBrightness(1 - brightness)
+    }
+    
+    private func colorWithAppendingBrightness(aBrightness: CGFloat) -> UIColor {
+        var hue: CGFloat = 0.0
+        var saturation: CGFloat = 0.0
+        var brightness: CGFloat = 0.0
+        var alpha: CGFloat = 0.0
+        
+        if getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha) {
+            return UIColor(hue: hue, saturation: saturation, brightness: brightness * aBrightness, alpha: alpha)
+        } else {
+            return self
+        }
+    }
+    
 }
